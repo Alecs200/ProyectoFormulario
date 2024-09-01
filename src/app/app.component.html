@@ -1,0 +1,51 @@
+<div>
+  <h1>Administración de Estudiantes</h1>
+  
+  <table *ngIf="hayEstudiantes()">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Matrícula</th>
+        <th>Curso</th>
+        <th>Notas</th>
+        <th>Borrar</th>
+        <th>Seleccionar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let estudiante of estudiantes">
+        <td>{{estudiante.nombre}}</td>
+        <td>{{estudiante.matricula}}</td>
+        <td>{{estudiante.curso}}</td>
+        <td>
+          <ul>
+            <li *ngFor="let nota of estudiante.notas">
+              {{nota.asignatura}}: {{nota.calificacion}}
+            </li>
+          </ul>
+        </td>
+        <td><button (click)="borrar(estudiante.matricula)">Borrar</button></td>
+        <td><button (click)="seleccionar(estudiante)">Seleccionar</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="!hayEstudiantes()">No hay estudiantes.</p>
+
+  <div>
+    <p>Nombre:<input type="text" [(ngModel)]="estudiante.nombre" /></p>
+    <p>Matrícula:<input type="text" [(ngModel)]="estudiante.matricula" /></p>
+    <p>Curso:<input type="text" [(ngModel)]="estudiante.curso" /></p>
+
+    <h3>Notas</h3>
+    <div>
+      <p>Asignatura:<input type="text" [(ngModel)]="nota.asignatura" /></p>
+      <p>Calificación:<input type="number" [(ngModel)]="nota.calificacion" /></p>
+      <p><button (click)="agregarNota()">Agregar Nota</button></p>
+    </div>
+
+    <p>
+      <button (click)="agregar()">Agregar Estudiante</button>
+      <button (click)="modificar()">Modificar Estudiante</button>
+    </p>
+  </div>
+</div>

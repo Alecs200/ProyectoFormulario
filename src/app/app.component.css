@@ -1,0 +1,102 @@
+/* Estilos para la tabla de estudiantes */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Estilo para los botones */
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Estilo para los formularios */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Títulos y subtítulos */
+h1 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: 'Arial', sans-serif;
+  color: #4CAF50;
+  margin-top: 20px;
+}
+
+/* Contenedor principal */
+div {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+/* Estilos para listas dentro de la tabla */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Alertas o mensajes */
+p.alerta {
+  background-color: #ffcccc;
+  color: #ff0000;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
